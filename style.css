@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-black-blue: hsl(234, 17%, 12%);
+}
+body {
+    min-height: 100vh;
+  font-family: "Red Hat Text", sans-serif;
+  background-color: var(--very-dark-blue);
+  background-image: url(images/pattern-hills.svg), url(images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+#main-container {
+    text-align: center;
+}
+.title {
+    color: var(--white);
+    font-size: 1.375rem;
+    padding: 6.875rem 0;
+    text-transform: uppercase;
+}
+.times-contain {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.time-wrapper > p {
+    font-size: .875rem;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+}
+.time {
+    width: 9.25rem;
+    height: 9.25rem;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--soft-red);
+    background-color: var(--dark-desaturated-blue);
+}
