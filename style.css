@@ -14,7 +14,7 @@
   --very-dark-black-blue: hsl(234, 17%, 12%);
 }
 body {
-    min-height: 100vh;
+  min-height: 100vh;
   font-family: "Red Hat Text", sans-serif;
   background-color: var(--very-dark-blue);
   background-image: url(images/pattern-hills.svg), url(images/bg-stars.svg);
@@ -23,31 +23,65 @@ body {
   background-size: 100%;
 }
 #main-container {
-    text-align: center;
+  text-align: center;
 }
 .title {
-    color: var(--white);
-    font-size: 1.375rem;
-    padding: 6.875rem 0;
-    text-transform: uppercase;
+  color: var(--white);
+  font-size: 1.375rem;
+  padding: 6.875rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
 }
 .times-contain {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 .time-wrapper > p {
-    font-size: .875rem;
-    color: var(--grayish-blue);
-    text-transform: uppercase;
+  font-size: 0.875rem;
+  padding-top: 2em;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .time {
-    width: 9.25rem;
-    height: 9.25rem;
-    font-size: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--soft-red);
-    background-color: var(--dark-desaturated-blue);
+  width: 9.25rem;
+  height: 9.25rem;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--soft-red);
+  position: relative;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 0 0.55rem 0 var(--very-dark-black-blue);
+}
+.time::after {
+  content: "";
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+.dot {
+  width: 12%;
+  height: 12%;
+  position: absolute;
+  background-color: var(--very-dark-black-blue);
+  border-radius: 50%;
+  z-index: 99;
+}
+.dot.left {
+  left: 0;
+  transform: translateX(-50%);
+}
+.dot.right {
+  right: 0%;
+  transform: translateX(50%);
 }
